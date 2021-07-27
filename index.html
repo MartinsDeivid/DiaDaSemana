@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testes</title>
+</head>
+<body>
+    <h1>Testes2...</h1>
+    <button onclick="diaDaSemana()">Dia da semana</button>
+    <p>
+        Resultado: <span>???</span>
+    </p>
+    <script>
+        
+        const dias = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
+        
+        function diaDaSemana() {
+            const d = new Date()
+            const dia = dias[d.getDay()]
+            console.log(dia)
+            document.querySelector("span").innerText = dia
+            //alert("Hoje eh "++"!")
+        }
+    </script>
+</body>
+</html>
