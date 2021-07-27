@@ -3,13 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <title>Testes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            background: #eee;
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            font-size: 16px;
+        }
+
+        #container {
+            min-width: 280px;
+            background: white;
+            box-shadow: 0 0 1rem rgba(0,0,0,.5);
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        header {
+            background: purple;
+            color: white;
+            line-height: 1.5rem;
+            padding: 1rem;
+            text-transform: uppercase;
+        }
+        header span {
+            display:block;
+            font-size: 3rem;
+            opacity: 0.5;
+        }
+
+        main {
+            padding: 1rem;
+        }
+        main #valor {
+            font-size: 3rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+        }
+        footer button {
+            background: purple;
+            color: white;
+            text-transform: uppercase;
+            border: none;
+            padding: .5rem 1rem;
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 1rem;
+            width: 100%;
+            border-radius: .5rem;
+            transition: .2s;
+        }
+
+        footer button:hover {
+            opacity: .7;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>Testes2...</h1>
-    <button onclick="diaDaSemana()">Dia da semana</button>
-    <p>
-        Resultado: <span>???</span>
-    </p>
+    <div id="container">
+        <header>
+            <h1>Dia da Semana <span>fácil</span></h1>
+        </header>
+        <main>
+            <p>Resultado:</p>
+            <p id="valor">_______</p>
+        </main>
+        <footer>
+            <button onclick="diaDaSemana()">Dia da semana</button>
+        </footer>
+    </main>
     <script>
         
         const dias = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
@@ -18,7 +94,7 @@
             const d = new Date()
             const dia = dias[d.getDay()]
             console.log(dia)
-            document.querySelector("span").innerText = dia
+            document.querySelector("#valor").innerText = dia
             //alert("Hoje eh "++"!")
         }
     </script>
