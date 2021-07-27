@@ -94,13 +94,13 @@
     <script>
         
         const dias = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
-        
-        function diaDaSemana() {
+
+        // Exemplo de Arrow Function
+        const diaDaSemana = () => {
             const d = new Date()
             const dia = dias[d.getDay()]
             console.log(dia)
             document.querySelector("#valor").innerText = dia
-            //alert("Hoje eh "++"!")
         }
     </script>
 </body>
